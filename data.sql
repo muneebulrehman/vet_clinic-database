@@ -21,3 +21,23 @@ insert into animals(name_,date_of_birth,escape_attempts,neutered,weight_kg) valu
 insert into animals(name_,date_of_birth,escape_attempts,neutered,weight_kg) values ('Blossom', '13-10-1998', 3, TRUE, 17);
 
 insert into animals(name_,date_of_birth,escape_attempts,neutered,weight_kg) values ('Ditto', '14-05-2022', 4, TRUE, 22);
+
+BEGIN;
+
+UPDATE animals SET species = 'unspecified';
+
+SELECT * from animals;
+
+ROLLBACK;
+
+SELECT * from animals;
+
+BEGIN;
+
+UPDATE animals SET species = 'digimon' WHERE name_ LIKE '%mon';
+
+UPDATE animals SET species = 'pokemon' WHERE species IS NULL;
+
+COMMIT TRANSACTION;
+
+select * from animals
