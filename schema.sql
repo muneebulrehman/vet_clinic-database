@@ -27,3 +27,7 @@ alter table animals drop species;
 alter table animals add species_id int;
 
 alter table animals add foreign key (species_id) references species(id);
+
+alter table animals add owners_id int;
+
+alter table animals add foreign key (owners_id) references owners(id);
