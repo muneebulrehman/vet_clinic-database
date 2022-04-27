@@ -78,3 +78,4 @@ insert into owners (full_name,age) values
 ('Dean Winchester', 14),
 ('Jodie Whittaker', 38);
 
+insert into species(name) values ('Pokemon'), ('Digimon');
