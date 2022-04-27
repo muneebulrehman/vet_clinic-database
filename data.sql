@@ -79,3 +79,7 @@ insert into owners (full_name,age) values
 ('Jodie Whittaker', 38);
 
 insert into species(name) values ('Pokemon'), ('Digimon');
+
+update animals set species_id = 2 where name_ like '%mon';
+
+update animals set species_id = 1 where name_ not like '%mon';
