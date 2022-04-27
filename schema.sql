@@ -21,3 +21,9 @@ create table species (
     id serial primary key not null,
     name varchar(255) not null
 )
+
+alter table animals drop species;
+
+alter table animals add species_id int;
+
+alter table animals add foreign key (species_id) references species(id);
