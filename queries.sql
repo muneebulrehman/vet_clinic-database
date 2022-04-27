@@ -38,3 +38,7 @@ select species, min(weight_kg), max(weight_kg) from animals group by species;
 -- What is the average number of escape attempts per animal type of those born between 1990 and 2000?
 
 select species, avg(escape_attempts) from animals where date_of_birth between '01-01-1990' and '31-12-2000' group by species;
+
+-- What animals belong to Melody Pond?
+
+select * from animals join owners on animals.owners_id = owners.id where owners.full_name = 'Melody Pond';
