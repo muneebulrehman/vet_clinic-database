@@ -31,3 +31,12 @@ alter table animals add foreign key (species_id) references species(id);
 alter table animals add owners_id int;
 
 alter table animals add foreign key (owners_id) references owners(id);
+
+--Creating table vets
+
+create table vets (
+    id serial primary key not null,
+    name varchar(255) not null,
+    age int not null,
+    date_of_graduation date not null
+    )
