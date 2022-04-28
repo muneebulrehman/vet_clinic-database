@@ -39,4 +39,13 @@ create table vets (
     name varchar(255) not null,
     age int not null,
     date_of_graduation date not null
-    )
+    );
+
+ --Creating specialization table 
+
+create table specialization (
+    species_id int not null,
+    vet_id int not null,
+    foreign key (species_id) references species(id),
+    foreign key (vet_id) references vets(id)
+);
