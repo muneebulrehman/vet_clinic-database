@@ -109,3 +109,7 @@ insert into vets(name, age, date_of_graduation) values
     ('Maisy Smith', 26, '17-01-2019'),
     ('Stephanie Mendez', 64, '04-05-1981'),
     ('Jack Harkness', 38, '08-06-2008');
+
+  -- Inserted data inot specialization table.
+
+  insert into specialization (species_id, vet_id) values (1,1), ( 1,3), (2,3), (2,4);
