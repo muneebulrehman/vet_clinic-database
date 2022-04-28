@@ -49,3 +49,13 @@ create table specialization (
     foreign key (species_id) references species(id),
     foreign key (vet_id) references vets(id)
 );
+
+-- Creating visits table 
+
+create table visits (
+    animal_id int not null,
+    vet_id int not null,
+    date_of_visit date not null,
+    foreign key (animal_id) references animals(id),
+    foreign key (vet_id) references vets(id)
+);
