@@ -68,3 +68,36 @@ COMMIT;
 
 select * from animals;
 
+-- Inserting data into owners table
+
+insert into owners (full_name,age) values
+('Sam Smith', 34),
+('Jennifer Orwell', 19),
+('Bob', 45),
+('Melody Pond', 77),
+('Dean Winchester', 14),
+('Jodie Whittaker', 38);
+
+insert into species(name) values ('Pokemon'), ('Digimon');
+
+update animals set species_id = 2 where name_ like '%mon';
+
+update animals set species_id = 1 where name_ not like '%mon';
+
+-- Updating animals table with respective owners reference id's
+
+insert into species(name) values ('Pokemon'), ('Digimon');
+
+update animals set species_id = 2 where name_ like '%mon';
+
+update animals set species_id = 1 where name_ not like '%mon';
+
+update animals set owners_id = 1 where name_ = 'Agumon';
+
+update animals set owners_id = 2 where name_ = 'Gabumon' or name_ = 'Pikachu';
+
+update animals set owners_id = 3 where name_ in ('Devimon', 'Plantmon');
+
+update animals set owners_id = (select id from owners  where full_name = 'Melody Pond') where name_ in ('Charmander', 'Squirtle', 'Blossom');
+
+update animals set owners_id = 5 where name_ in ('Angemon', 'Boarmon');
