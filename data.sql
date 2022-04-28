@@ -101,3 +101,11 @@ update animals set owners_id = 3 where name_ in ('Devimon', 'Plantmon');
 update animals set owners_id = (select id from owners  where full_name = 'Melody Pond') where name_ in ('Charmander', 'Squirtle', 'Blossom');
 
 update animals set owners_id = 5 where name_ in ('Angemon', 'Boarmon');
+
+-- Inserting data into vets table
+
+insert into vets(name, age, date_of_graduation) values
+    ('William Tatcher', 45, '23-04-2000'),
+    ('Maisy Smith', 26, '17-01-2019'),
+    ('Stephanie Mendez', 64, '04-05-1981'),
+    ('Jack Harkness', 38, '08-06-2008');
