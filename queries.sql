@@ -42,3 +42,25 @@ select species, avg(escape_attempts) from animals where date_of_birth between '0
 -- What animals belong to Melody Pond?
 
 select * from animals join owners on animals.owners_id = owners.id where owners.full_name = 'Melody Pond';
+
+-- List of all animals that are pokemon (their type is Pokemon).
+
+select * from animals join species on animals.species_id = species.id where species.name = 'Pokemon'
+
+-- List all owners and their animals, remember to include those that don't own any animal.
+
+
+
+-- How many animals are there per species?
+
+
+
+-- List all Digimon owned by Jennifer Orwell.
+
+
+
+-- List all animals owned by Dean Winchester that haven't tried to escape.
+
+
+
+-- Who owns the most animals?
