@@ -112,3 +112,11 @@ where sp.species_id != a.species_id OR s.name IS NULL;
 select s.name, count(*) as most_visited from visits as vis join animals as a on vis.animal_id = a.id join species as s
   on s.id = a.species_id join vets as v on vis.vet_id = v.id left join specialization as sp on v.id = sp.vet_id
 where sp.vet_id IS NULL AND v.name LIKE 'Maisy Smith' group by s.name order by most_visited desc limit (1);
+
+-- Performance auditing
+
+explain analyze SELECT COUNT(*) FROM visits where animal_id = 4;
+
+explain analyse SELECT * FROM visits where vet_id = 2;
+
+explain analyse SELECT * FROM owners where email = 'owner_18327@mail.com';
